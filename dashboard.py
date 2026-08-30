@@ -19,17 +19,14 @@ st.set_page_config(
 # CUSTOM STYLING
 # =========================================================
 
-st.markdown(
+st.html(
     dedent(
         """
         <style>
         /* ---------- Global ---------- */
         .stApp {
-            background:
-                radial-gradient(circle at 88% 4%, rgba(124, 58, 237, .20), transparent 28%),
-                radial-gradient(circle at 5% 35%, rgba(6, 182, 212, .10), transparent 25%),
-                #080b18;
-            color: #f8fafc;
+            background: #f7f8fc;
+            color: #27324a;
         }
 
         .main .block-container {
@@ -48,8 +45,8 @@ st.markdown(
 
         /* ---------- Sidebar ---------- */
         section[data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #0d1024 0%, #080b18 100%);
-            border-right: 1px solid rgba(139, 92, 246, .20);
+            background: #ffffff;
+            border-right: 1px solid #e4e7ef;
         }
 
         .sidebar-brand {
@@ -65,31 +62,31 @@ st.markdown(
         .sidebar-title {
             font-size: 27px;
             font-weight: 800;
-            background: linear-gradient(90deg, #fff, #a855f7, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: none;
+            
+            color: #6652a8;
         }
 
         .sidebar-subtitle {
-            color: #94a3b8;
-            font-size: 12px;
+            color: #667085;
+            font-size: 15px;
             margin-top: 5px;
         }
 
         .sidebar-nav {
-            color: #cbd5e1;
+            color: #526078;
             line-height: 2.5;
-            font-size: 13px;
+            font-size: 15px;
         }
 
         .sidebar-quote {
             margin-top: 45px;
             padding: 17px;
             border-radius: 16px;
-            border: 1px solid rgba(168, 85, 247, .35);
-            background: rgba(15, 23, 42, .75);
-            color: #cbd5e1;
-            font-size: 13px;
+            border: 1px solid #ddd2f4;
+            background: #f7f5ff;
+            color: #526078;
+            font-size: 15px;
             line-height: 1.7;
         }
 
@@ -99,8 +96,8 @@ st.markdown(
         }
 
         .hero-small {
-            color: #a78bfa;
-            font-size: 14px;
+            color: #7057b7;
+            font-size: 15px;
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -110,13 +107,13 @@ st.markdown(
             font-weight: 850;
             line-height: 1.05;
             margin: 2px 0 8px;
-            background: linear-gradient(90deg, #fff, #c084fc 48%, #22d3ee);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: none;
+            
+            color: #6652a8;
         }
 
         .hero-description {
-            color: #94a3b8;
+            color: #667085;
             font-size: 16px;
             max-width: 760px;
             line-height: 1.6;
@@ -127,10 +124,10 @@ st.markdown(
             margin-top: 14px;
             padding: 7px 13px;
             border-radius: 999px;
-            background: rgba(34, 211, 238, .09);
-            border: 1px solid rgba(34, 211, 238, .25);
-            color: #67e8f9;
-            font-size: 12px;
+            background: #eef7ff;
+            border: 1px solid #dbeafe;
+            color: #5b7fc4;
+            font-size: 15px;
             font-weight: 700;
         }
 
@@ -140,7 +137,7 @@ st.markdown(
             font-weight: 800;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: #f8fafc;
+            color: #27324a;
         }
 
         /* ---------- KPI cards ---------- */
@@ -148,9 +145,9 @@ st.markdown(
             min-height: 145px;
             padding: 20px;
             border-radius: 18px;
-            background: linear-gradient(145deg, rgba(20, 27, 52, .96), rgba(12, 16, 34, .96));
-            border: 1px solid rgba(148, 163, 184, .12);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .20);
+            background: #ffffff;
+            border: 1px solid #e4e7ef;
+            box-shadow: 0 8px 25px rgba(30, 41, 59, .06);
             position: relative;
             overflow: hidden;
         }
@@ -163,7 +160,7 @@ st.markdown(
             right: -40px;
             top: -40px;
             border-radius: 50%;
-            background: rgba(168, 85, 247, .16);
+            background: #f7f5ff;
             filter: blur(4px);
         }
 
@@ -173,42 +170,42 @@ st.markdown(
         }
 
         .metric-label {
-            color: #94a3b8;
-            font-size: 13px;
+            color: #667085;
+            font-size: 15px;
             font-weight: 650;
         }
 
         .metric-value {
-            color: #fff;
+            color: #27324a;
             font-size: 29px;
             font-weight: 850;
             margin-top: 5px;
         }
 
         .metric-change {
-            color: #4ade80;
-            font-size: 12px;
+            color: #3b9b7a;
+            font-size: 15px;
             font-weight: 700;
             margin-top: 5px;
         }
 
-        .purple { border-top: 2px solid #a855f7; }
-        .pink { border-top: 2px solid #ec4899; }
-        .cyan { border-top: 2px solid #22d3ee; }
-        .green { border-top: 2px solid #22c55e; }
+        .purple { border-top: 2px solid #9a83d5; }
+        .pink { border-top: 2px solid #e7ad62; }
+        .cyan { border-top: 2px solid #3b82f6; }
+        .green { border-top: 2px solid #66b89a; }
 
         /* ---------- Comparison ---------- */
         .comparison {
             padding: 24px;
             border-radius: 20px;
-            background: linear-gradient(135deg, rgba(25, 20, 55, .96), rgba(10, 18, 35, .96));
-            border: 1px solid rgba(139, 92, 246, .25);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+            background: #ffffff;
+            border: 1px solid #e4e7ef;
+            box-shadow: 0 8px 25px rgba(30, 41, 59, .06);
         }
 
         .comparison-label {
-            color: #94a3b8;
-            font-size: 13px;
+            color: #667085;
+            font-size: 15px;
             margin-bottom: 5px;
         }
 
@@ -217,13 +214,13 @@ st.markdown(
             font-weight: 850;
         }
 
-        .baseline-value { color: #c084fc; }
-        .ai-value { color: #4ade80; }
+        .baseline-value { color: #7c3aed; }
+        .ai-value { color: #3b9b7a; }
 
         .progress-bg {
             width: 100%;
             height: 9px;
-            background: #1e293b;
+            background: #edf0f5;
             border-radius: 99px;
             overflow: hidden;
             margin-top: 12px;
@@ -231,13 +228,13 @@ st.markdown(
 
         .progress-purple {
             height: 100%;
-            background: linear-gradient(90deg, #7c3aed, #c084fc);
+            background: linear-gradient(90deg, #9a83d5, #b8a8e5);
             border-radius: 99px;
         }
 
         .progress-green {
             height: 100%;
-            background: linear-gradient(90deg, #16a34a, #4ade80);
+            background: linear-gradient(90deg, #66b89a, #8bd0b4);
             border-radius: 99px;
         }
 
@@ -246,25 +243,25 @@ st.markdown(
             padding: 19px;
             min-height: 135px;
             border-radius: 18px;
-            background: rgba(15, 23, 42, .82);
-            border: 1px solid rgba(148, 163, 184, .12);
+            background: #ffffff;
+            border: 1px solid #e4e7ef;
         }
 
         .insight-heading {
             font-size: 16px;
             font-weight: 800;
-            color: #f8fafc;
+            color: #27324a;
             margin-bottom: 9px;
         }
 
         .insight-text {
-            color: #94a3b8;
-            font-size: 13px;
+            color: #667085;
+            font-size: 15px;
             line-height: 1.65;
         }
 
         .highlight {
-            color: #4ade80;
+            color: #3b9b7a;
             font-weight: 800;
         }
 
@@ -272,38 +269,38 @@ st.markdown(
         .transaction-wrapper {
             border-radius: 18px;
             overflow-x: auto;
-            border: 1px solid rgba(148, 163, 184, .12);
-            background: rgba(15, 23, 42, .80);
+            border: 1px solid #e4e7ef;
+            background: #ffffff;
         }
 
         .transaction-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 12px;
+            font-size: 15px;
             min-width: 850px;
         }
 
         .transaction-table th {
             text-align: left;
             padding: 13px;
-            color: #94a3b8;
-            background: #111827;
-            border-bottom: 1px solid #1e293b;
+            color: #667085;
+            background: #f8fafc;
+            border-bottom: 1px solid #e4e7ef;
             white-space: nowrap;
         }
 
         .transaction-table td {
             padding: 13px;
-            color: #cbd5e1;
-            border-bottom: 1px solid rgba(51, 65, 85, .45);
+            color: #526078;
+            border-bottom: 1px solid #edf0f5;
         }
 
         .transaction-table tr:hover {
-            background: rgba(124, 58, 237, .08);
+            background: #f7f5ff;
         }
 
         .recovered {
-            color: #4ade80 !important;
+            color: #3b9b7a !important;
             font-weight: 750;
         }
 
@@ -315,13 +312,13 @@ st.markdown(
         }
 
         .badge-green {
-            background: rgba(34, 197, 94, .13);
-            color: #4ade80;
+            background: #dff5e9;
+            color: #3b9b7a;
         }
 
         .badge-red {
-            background: rgba(244, 63, 94, .13);
-            color: #fb7185;
+            background: #fde7ed;
+            color: #b85c77;
         }
 
         /* ---------- Footer ---------- */
@@ -330,25 +327,176 @@ st.markdown(
             padding: 23px;
             text-align: center;
             border-radius: 18px;
-            border: 1px solid rgba(168, 85, 247, .25);
-            background: linear-gradient(90deg, rgba(88, 28, 135, .18), rgba(14, 116, 144, .18));
+            border: 1px solid #e4e7ef;
+            background: linear-gradient(135deg, #ffffff, #f7f5ff);
         }
 
         .footer-title {
-            color: #f8fafc;
+            color: #27324a;
             font-weight: 800;
             font-size: 16px;
         }
 
         .footer-text {
-            color: #64748b;
-            font-size: 12px;
+            color: #667085;
+            font-size: 15px;
             margin-top: 6px;
         }
+
+
+        /* ---------- Soft pastel page background ---------- */
+        .stApp {
+            background:
+                radial-gradient(circle at 5% 5%, rgba(191, 177, 232, 0.22) 0, rgba(191, 177, 232, 0) 24%),
+                radial-gradient(circle at 96% 8%, rgba(170, 211, 238, 0.22) 0, rgba(170, 211, 238, 0) 27%),
+                radial-gradient(circle at 88% 78%, rgba(171, 222, 201, 0.18) 0, rgba(171, 222, 201, 0) 25%),
+                linear-gradient(135deg, #f8f9fd 0%, #f3f6fb 48%, #f8f5fc 100%);
+        }
+
+        .main .block-container {
+            background: rgba(255, 255, 255, 0.24);
+            border-radius: 28px;
+            padding-top: 2rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .main .block-container::before {
+            content: "";
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            right: -100px;
+            top: 160px;
+            border-radius: 50%;
+            background: rgba(190, 174, 232, 0.10);
+            filter: blur(35px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .main .block-container::after {
+            content: "";
+            position: fixed;
+            width: 280px;
+            height: 280px;
+            left: -110px;
+            bottom: 80px;
+            border-radius: 50%;
+            background: rgba(166, 210, 238, 0.10);
+            filter: blur(35px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        section[data-testid="stSidebar"] {
+            background:
+                linear-gradient(180deg, #f3effc 0%, #eef5fb 52%, #f1f8f4 100%);
+            border-right: 1px solid #dedceb;
+        }
+
+        section[data-testid="stSidebar"] > div {
+            background: transparent;
+        }
+
+        div[data-baseweb="select"] > div {
+            border-radius: 12px;
+            border-color: #d9ddea;
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        div[data-testid="stDataFrame"] {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        /* ---------- Pastel accents ---------- */
+        .hero {
+            background: linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(244,249,255,0.96) 52%, rgba(248,244,255,0.96) 100%);
+            border-color: #e4e1ef;
+        }
+
+        .hero::after {
+            background: rgba(154, 131, 213, 0.13);
+        }
+
+        .hero-pill {
+            background: #fbfaff;
+            border-color: #e2dcf5;
+        }
+
+        .metric-blue {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+        }
+
+        .metric-amber {
+            background: linear-gradient(135deg, #ffffff 0%, #fffaf2 100%);
+        }
+
+        .metric-purple {
+            background: linear-gradient(135deg, #ffffff 0%, #faf7ff 100%);
+        }
+
+        .metric-green {
+            background: linear-gradient(135deg, #ffffff 0%, #f3fbf7 100%);
+        }
+
+        .icon-blue {
+            background: #eaf4ff;
+        }
+
+        .icon-amber {
+            background: #fff3df;
+        }
+
+        .icon-purple {
+            background: #f1ebff;
+        }
+
+        .icon-green {
+            background: #e5f7ef;
+        }
+
+        .side-card {
+            background: linear-gradient(135deg, #f5f0ff 0%, #eef7ff 100%);
+            border-color: #ddd4f1;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fbfaff 100%);
+        }
+
+        .progress-purple {
+            background: linear-gradient(90deg, #9a83d5, #c2b3e8);
+        }
+
+        .progress-green {
+            background: linear-gradient(90deg, #66b89a, #9ad8bf);
+        }
+
+        .insight-card:nth-child(1) {
+            background: linear-gradient(135deg, #ffffff 0%, #f7f3ff 100%);
+        }
+
+        .insight-card:nth-child(2) {
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ef 100%);
+        }
+
+        .insight-card:nth-child(3) {
+            background: linear-gradient(135deg, #ffffff 0%, #f1fbf7 100%);
+        }
+
+        .insight-icon {
+            background: #f1ebff;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%);
+            border-color: #e1dcef;
+        }
+
         </style>
         """
     ),
-    unsafe_allow_html=True,
 )
 
 
@@ -402,7 +550,7 @@ ai_recovered_count = int(
 # =========================================================
 
 with st.sidebar:
-    st.markdown(
+    st.html(
         dedent(
             """
             <div class="sidebar-brand">
@@ -413,13 +561,12 @@ with st.sidebar:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
-    st.markdown("---")
+    st.divider()
 
-    st.markdown(
+    st.html(
         dedent(
             """
             <div class="sidebar-nav">
@@ -430,11 +577,10 @@ with st.sidebar:
                 ◈ &nbsp; Insights
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
-    st.markdown(
+    st.html(
         dedent(
             """
             <div class="sidebar-quote">
@@ -443,8 +589,7 @@ with st.sidebar:
                 Better outcomes. ✨
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 
@@ -452,7 +597,7 @@ with st.sidebar:
 # HERO
 # =========================================================
 
-st.markdown(
+st.html(
     dedent(
         """
         <div class="hero">
@@ -477,7 +622,6 @@ st.markdown(
         </div>
         """
     ),
-    unsafe_allow_html=True,
 )
 
 
@@ -485,15 +629,14 @@ st.markdown(
 # RECOVERY OVERVIEW
 # =========================================================
 
-st.markdown(
+st.html(
     '<div class="section-title">Recovery Overview</div>',
-    unsafe_allow_html=True,
 )
 
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="metric-card purple">
@@ -505,12 +648,11 @@ with col1:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 with col2:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="metric-card pink">
@@ -522,12 +664,11 @@ with col2:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 with col3:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="metric-card cyan">
@@ -539,12 +680,11 @@ with col3:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 with col4:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="metric-card green">
@@ -556,8 +696,7 @@ with col4:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 
@@ -565,12 +704,11 @@ with col4:
 # RECOVERY RATE COMPARISON
 # =========================================================
 
-st.markdown(
+st.html(
     '<div class="section-title">Recovery Rate Comparison</div>',
-    unsafe_allow_html=True,
 )
 
-st.markdown(
+st.html(
     dedent(
         f"""
         <div class="comparison">
@@ -597,7 +735,7 @@ st.markdown(
                         </div>
                     </div>
 
-                    <div style="color:#64748b;font-size:11px;margin-top:8px;">
+                    <div style="color:#667085;font-size:11px;margin-top:8px;">
                         {baseline_recovered_count:,} payments recovered
                     </div>
                 </div>
@@ -605,9 +743,9 @@ st.markdown(
                 <div style="
                     width:12%;
                     text-align:center;
-                    font-size:20px;
+                    font-size:22px;
                     font-weight:800;
-                    color:#64748b;">
+                    color:#667085;">
                     VS
                 </div>
 
@@ -627,7 +765,7 @@ st.markdown(
                         </div>
                     </div>
 
-                    <div style="color:#64748b;font-size:11px;margin-top:8px;">
+                    <div style="color:#667085;font-size:11px;margin-top:8px;">
                         {ai_recovered_count:,} payments recovered
                     </div>
                 </div>
@@ -656,7 +794,6 @@ st.markdown(
         </div>
         """
     ),
-    unsafe_allow_html=True,
 )
 
 
@@ -664,15 +801,14 @@ st.markdown(
 # PAYMENT ANALYTICS
 # =========================================================
 
-st.markdown(
+st.html(
     '<div class="section-title">Payment Analytics</div>',
-    unsafe_allow_html=True,
 )
 
 chart_col1, chart_col2 = st.columns(2)
 
 with chart_col1:
-    st.markdown(
+    st.html(
         dedent(
             """
             <div class="insight-card">
@@ -684,8 +820,7 @@ with chart_col1:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
     failure_counts = (
@@ -701,7 +836,7 @@ with chart_col1:
     )
 
 with chart_col2:
-    st.markdown(
+    st.html(
         dedent(
             """
             <div class="insight-card">
@@ -714,8 +849,7 @@ with chart_col2:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
     recovery_by_failure = (
@@ -736,15 +870,14 @@ with chart_col2:
 # KEY INSIGHTS
 # =========================================================
 
-st.markdown(
+st.html(
     '<div class="section-title">Key Insights</div>',
-    unsafe_allow_html=True,
 )
 
 insight1, insight2, insight3 = st.columns(3)
 
 with insight1:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="insight-card">
@@ -761,8 +894,7 @@ with insight1:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 with insight2:
@@ -770,7 +902,7 @@ with insight2:
     top_failure = top_failure_counts.idxmax()
     top_failure_count = top_failure_counts.max()
 
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="insight-card">
@@ -790,12 +922,11 @@ with insight2:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 with insight3:
-    st.markdown(
+    st.html(
         dedent(
             f"""
             <div class="insight-card">
@@ -815,8 +946,7 @@ with insight3:
                 </div>
             </div>
             """
-        ),
-        unsafe_allow_html=True,
+        )
     )
 
 
@@ -824,9 +954,8 @@ with insight3:
 # TRANSACTION EXPLORER
 # =========================================================
 
-st.markdown(
+st.html(
     '<div class="section-title">Transaction Explorer</div>',
-    unsafe_allow_html=True,
 )
 
 filter_col1, filter_col2 = st.columns(2)
@@ -898,7 +1027,41 @@ available_columns = [
     if column in filtered.columns
 ]
 
-table = filtered[available_columns].head(25)
+# Let the user control how many matching transactions are visible.
+# The default remains 25 so the page stays compact, but all matching
+# transactions can now be displayed.
+if len(filtered) > 25:
+    row_options = [25, 50, 100, 250, 500]
+    row_options = [
+        option for option in row_options
+        if option <= len(filtered)
+    ]
+
+    if len(filtered) not in row_options:
+        row_options.append(len(filtered))
+
+    row_options = sorted(set(row_options))
+
+    display_count = st.selectbox(
+        "Transactions to display",
+        row_options,
+        index=0,
+        format_func=lambda value: (
+            f"{value} transactions"
+            if value < len(filtered)
+            else f"{value} transactions (all matching)"
+        ),
+    )
+else:
+    display_count = len(filtered)
+
+if len(filtered) > 25:
+    st.caption(
+        "Use the selector above to view more transactions, "
+        "including all matching records."
+    )
+
+table = filtered[available_columns].head(display_count)
 
 html = """
 <div class="transaction-wrapper">
@@ -969,14 +1132,12 @@ html += """
 </div>
 """
 
-st.markdown(
+st.html(
     html,
-    unsafe_allow_html=True,
 )
 
 st.caption(
-    f"Showing {min(len(filtered), 25)} "
-    f"of {len(filtered)} matching transactions."
+    f"Showing {len(table)} of {len(filtered)} matching transactions."
 )
 
 
@@ -984,7 +1145,7 @@ st.caption(
 # FOOTER
 # =========================================================
 
-st.markdown(
+st.html(
     dedent(
         """
         <div class="custom-footer">
@@ -1001,7 +1162,7 @@ st.markdown(
             <div class="footer-text" style="margin-top:12px;">
                 Created by
                 <b style="color:#c084fc;">
-                    Purvika Reddy
+                    Purvika Reddy MK
                 </b>
                 · Turning failed payments into smarter recovery decisions ✨
             </div>
@@ -1009,5 +1170,4 @@ st.markdown(
         </div>
         """
     ),
-    unsafe_allow_html=True,
 )

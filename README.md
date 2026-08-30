@@ -19,6 +19,12 @@ The project was built around a payment-recovery problem relevant to **Razorpay**
 
 ---
 
+## Live Demo
+
+[Open the RecoverAI Dashboard](https://recoverai-jqfndnevhv3gsijiwsycnf.streamlit.app/)
+
+---
+
 ## Why I Built This
 
 Failed payments are not all the same.
@@ -28,6 +34,7 @@ A payment that fails because of an expired card should not necessarily be treate
 I wanted to explore whether recovery decisions could be made more intelligently by combining:
 
 1. predictable rules for cases that can be handled deterministically, and
+
 2. AI-assisted reasoning for cases where additional payment and customer context may matter.
 
 Building RecoverAI also gave me an opportunity to understand how an AI component can be incorporated into a system **without giving the model unrestricted control over important actions**.
@@ -92,10 +99,10 @@ The system follows this workflow:
                      Payment Simulator
                             │
                             ▼
-                       Result
+                         Result
                             │
                             ▼
-                  Audit + Evaluation
+                    Audit + Evaluation
                             │
                             ▼
                        Dashboard

@@ -1,0 +1,501 @@
+transaction_id,amount,failure_reason,retry_count,previous_successes,action,reason,result,recovered_amount
+TXN0001,4999,insufficient_funds,2,4,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,4999
+TXN0002,799,bank_error,0,11,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0003,12999,insufficient_funds,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0004,4999,insufficient_funds,2,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,4999
+TXN0005,499,insufficient_funds,1,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,499
+TXN0006,24999,insufficient_funds,1,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0007,2499,timeout,2,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0008,5999,bank_error,1,10,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0009,24999,timeout,2,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0010,12999,insufficient_funds,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0011,2499,bank_error,1,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0012,2499,timeout,2,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0013,24999,insufficient_funds,1,8,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,24999
+TXN0014,2499,insufficient_funds,0,11,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0015,8999,insufficient_funds,2,11,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,8999
+TXN0016,2499,insufficient_funds,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0017,12999,timeout,1,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0018,2499,insufficient_funds,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0019,1299,timeout,2,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0020,8999,bank_error,2,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0021,5999,timeout,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0022,5999,insufficient_funds,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0023,499,bank_error,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0024,24999,bank_error,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0025,499,expired_card,0,6,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,499
+TXN0026,1299,timeout,0,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0027,499,timeout,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0028,24999,expired_card,2,3,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,24999
+TXN0029,24999,bank_error,0,1,RETRY,Bank error with no previous retry.,RECOVERED,24999
+TXN0030,1299,bank_error,0,8,RETRY,Bank error with no previous retry.,RECOVERED,1299
+TXN0031,1299,bank_error,0,2,RETRY,Bank error with no previous retry.,RECOVERED,1299
+TXN0032,3499,timeout,0,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0033,499,bank_error,0,3,RETRY,Bank error with no previous retry.,RECOVERED,499
+TXN0034,3499,insufficient_funds,1,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0035,5999,bank_error,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0036,8999,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0037,8999,insufficient_funds,2,6,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,8999
+TXN0038,3499,insufficient_funds,2,8,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0039,8999,bank_error,2,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0040,24999,timeout,2,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0041,4999,insufficient_funds,1,8,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,4999
+TXN0042,4999,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0043,4999,timeout,2,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0044,12999,timeout,2,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0045,3499,expired_card,2,6,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0046,4999,insufficient_funds,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0047,3499,insufficient_funds,1,10,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0048,4999,timeout,0,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0049,499,bank_error,1,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0050,3499,bank_error,0,11,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0051,1299,bank_error,0,9,RETRY,Bank error with no previous retry.,RECOVERED,1299
+TXN0052,1299,bank_error,1,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0053,8999,timeout,0,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0054,4999,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0055,24999,timeout,2,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0056,8999,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,8999
+TXN0057,8999,insufficient_funds,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0058,3499,timeout,3,1,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0059,4999,bank_error,1,5,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0060,2499,insufficient_funds,2,5,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0061,799,expired_card,0,1,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0062,1299,bank_error,2,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0063,24999,insufficient_funds,0,8,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,24999
+TXN0064,2499,insufficient_funds,0,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0065,24999,insufficient_funds,2,3,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0066,4999,bank_error,1,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0067,799,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0068,1299,timeout,0,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0069,3499,timeout,0,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0070,3499,insufficient_funds,0,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0071,499,bank_error,2,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0072,3499,expired_card,2,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0073,5999,bank_error,1,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0074,3499,bank_error,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0075,2499,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0076,2499,timeout,2,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0077,8999,insufficient_funds,0,9,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0078,8999,insufficient_funds,2,6,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0079,499,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0080,3499,insufficient_funds,3,3,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0081,2499,insufficient_funds,1,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,2499
+TXN0082,24999,insufficient_funds,2,10,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0083,1299,timeout,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0084,3499,timeout,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0085,799,bank_error,2,11,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0086,3499,insufficient_funds,2,9,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0087,499,bank_error,2,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0088,24999,insufficient_funds,1,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0089,1299,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0090,12999,bank_error,1,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0091,12999,timeout,0,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0092,24999,expired_card,2,4,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0093,1299,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0094,1299,insufficient_funds,0,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0095,1299,timeout,0,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0096,12999,timeout,2,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0097,24999,bank_error,2,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0098,12999,bank_error,0,12,RETRY,Bank error with no previous retry.,RECOVERED,12999
+TXN0099,1299,timeout,1,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0100,12999,timeout,1,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0101,5999,timeout,0,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0102,12999,expired_card,1,12,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0103,799,bank_error,2,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0104,799,timeout,0,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0105,2499,timeout,1,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0106,24999,insufficient_funds,1,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0107,799,bank_error,2,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0108,4999,bank_error,2,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0109,8999,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0110,2499,insufficient_funds,2,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0111,499,insufficient_funds,0,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,499
+TXN0112,2499,bank_error,2,10,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0113,799,timeout,2,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0114,24999,insufficient_funds,2,10,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0115,12999,timeout,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0116,799,insufficient_funds,0,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,799
+TXN0117,4999,insufficient_funds,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0118,24999,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0119,24999,timeout,0,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0120,799,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0121,1299,insufficient_funds,1,9,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,1299
+TXN0122,799,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0123,2499,timeout,2,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0124,2499,expired_card,2,5,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,2499
+TXN0125,4999,insufficient_funds,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0126,799,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0127,3499,insufficient_funds,2,12,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0128,24999,timeout,2,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0129,3499,insufficient_funds,0,11,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0130,24999,bank_error,2,1,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0131,24999,bank_error,0,11,RETRY,Bank error with no previous retry.,RECOVERED,24999
+TXN0132,4999,insufficient_funds,0,11,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,4999
+TXN0133,799,timeout,1,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0134,5999,insufficient_funds,1,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0135,2499,insufficient_funds,1,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0136,3499,expired_card,1,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0137,499,insufficient_funds,2,4,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0138,3499,bank_error,0,3,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0139,1299,insufficient_funds,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0140,1299,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0141,5999,timeout,1,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0142,1299,bank_error,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0143,12999,bank_error,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0144,799,timeout,0,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0145,24999,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0146,5999,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0147,3499,insufficient_funds,1,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0148,799,insufficient_funds,0,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,799
+TXN0149,1299,insufficient_funds,0,10,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0150,499,insufficient_funds,2,3,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0151,499,insufficient_funds,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0152,799,expired_card,1,5,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,799
+TXN0153,12999,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0154,24999,expired_card,3,4,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0155,8999,timeout,2,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0156,1299,insufficient_funds,2,9,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0157,24999,bank_error,0,7,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0158,8999,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0159,12999,bank_error,1,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0160,24999,bank_error,0,9,RETRY,Bank error with no previous retry.,RECOVERED,24999
+TXN0161,12999,insufficient_funds,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0162,5999,bank_error,1,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0163,3499,timeout,0,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0164,499,timeout,1,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0165,1299,expired_card,1,8,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,1299
+TXN0166,24999,expired_card,1,3,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,24999
+TXN0167,3499,bank_error,1,11,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0168,799,expired_card,1,4,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,799
+TXN0169,2499,bank_error,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0170,3499,timeout,0,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0171,2499,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0172,24999,timeout,2,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0173,24999,bank_error,1,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0174,24999,timeout,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0175,5999,bank_error,2,10,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0176,5999,insufficient_funds,1,5,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0177,5999,insufficient_funds,2,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0178,799,expired_card,0,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,799
+TXN0179,12999,bank_error,2,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0180,8999,bank_error,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0181,1299,insufficient_funds,2,12,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0182,799,bank_error,0,4,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0183,499,timeout,2,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0184,799,insufficient_funds,1,5,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0185,799,bank_error,1,1,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0186,24999,timeout,0,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0187,799,expired_card,1,10,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,799
+TXN0188,12999,bank_error,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0189,5999,bank_error,1,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0190,3499,timeout,1,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0191,2499,expired_card,1,10,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,2499
+TXN0192,5999,timeout,1,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0193,3499,timeout,1,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0194,24999,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0195,24999,insufficient_funds,2,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0196,5999,expired_card,3,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,5999
+TXN0197,8999,insufficient_funds,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0198,499,bank_error,3,1,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0199,3499,insufficient_funds,0,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0200,8999,insufficient_funds,2,3,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,8999
+TXN0201,12999,timeout,1,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0202,799,bank_error,0,11,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0203,799,bank_error,0,3,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0204,8999,insufficient_funds,0,10,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0205,24999,timeout,2,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0206,499,insufficient_funds,2,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0207,12999,timeout,1,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0208,1299,bank_error,2,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0209,499,bank_error,2,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0210,4999,bank_error,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0211,12999,expired_card,1,7,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0212,8999,insufficient_funds,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0213,1299,insufficient_funds,2,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,1299
+TXN0214,2499,bank_error,3,1,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0215,499,timeout,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0216,8999,insufficient_funds,1,3,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0217,24999,bank_error,0,1,RETRY,Bank error with no previous retry.,RECOVERED,24999
+TXN0218,1299,insufficient_funds,2,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,1299
+TXN0219,2499,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0220,4999,insufficient_funds,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0221,12999,insufficient_funds,1,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0222,1299,bank_error,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0223,8999,insufficient_funds,0,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0224,3499,insufficient_funds,0,1,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0225,8999,timeout,0,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0226,2499,insufficient_funds,1,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,2499
+TXN0227,799,timeout,2,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0228,3499,timeout,0,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0229,799,insufficient_funds,2,8,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0230,12999,timeout,1,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0231,2499,timeout,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0232,4999,expired_card,2,11,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,4999
+TXN0233,1299,timeout,2,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0234,3499,expired_card,3,6,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0235,2499,expired_card,2,5,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0236,8999,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0237,3499,expired_card,1,12,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0238,8999,insufficient_funds,0,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0239,499,insufficient_funds,2,10,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0240,24999,bank_error,1,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0241,499,insufficient_funds,3,3,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0242,2499,expired_card,2,8,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,2499
+TXN0243,5999,timeout,0,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0244,499,insufficient_funds,1,8,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,499
+TXN0245,3499,bank_error,2,10,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0246,499,timeout,1,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0247,12999,insufficient_funds,1,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,12999
+TXN0248,12999,timeout,2,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0249,1299,insufficient_funds,1,9,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,1299
+TXN0250,3499,bank_error,2,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0251,4999,timeout,2,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0252,3499,insufficient_funds,2,7,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0253,499,timeout,3,1,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0254,12999,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,12999
+TXN0255,2499,insufficient_funds,0,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0256,3499,timeout,2,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0257,8999,timeout,0,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0258,499,bank_error,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0259,799,timeout,1,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0260,12999,timeout,0,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0261,4999,bank_error,2,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0262,2499,timeout,1,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0263,499,expired_card,1,9,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0264,8999,insufficient_funds,0,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0265,3499,bank_error,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0266,499,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0267,12999,expired_card,0,7,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0268,2499,bank_error,2,11,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0269,3499,bank_error,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0270,499,bank_error,0,7,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0271,12999,insufficient_funds,1,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0272,2499,bank_error,0,2,RETRY,Bank error with no previous retry.,RECOVERED,2499
+TXN0273,4999,timeout,1,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0274,5999,bank_error,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0275,2499,insufficient_funds,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0276,8999,bank_error,0,9,RETRY,Bank error with no previous retry.,RECOVERED,8999
+TXN0277,1299,timeout,2,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0278,3499,bank_error,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0279,1299,bank_error,0,8,RETRY,Bank error with no previous retry.,RECOVERED,1299
+TXN0280,5999,timeout,2,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0281,1299,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0282,3499,timeout,0,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0283,3499,insufficient_funds,0,3,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0284,3499,timeout,1,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0285,4999,bank_error,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0286,1299,expired_card,0,11,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0287,499,insufficient_funds,2,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0288,2499,timeout,2,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0289,799,bank_error,0,10,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0290,3499,expired_card,2,5,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0291,5999,bank_error,1,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0292,3499,insufficient_funds,2,12,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,3499
+TXN0293,5999,timeout,0,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0294,12999,bank_error,3,7,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0295,499,timeout,1,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0296,5999,insufficient_funds,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0297,24999,insufficient_funds,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0298,5999,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,5999
+TXN0299,5999,bank_error,1,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0300,799,timeout,2,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0301,799,timeout,1,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0302,2499,insufficient_funds,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0303,499,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0304,12999,insufficient_funds,0,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,12999
+TXN0305,799,insufficient_funds,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0306,2499,timeout,2,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0307,3499,insufficient_funds,2,11,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0308,799,insufficient_funds,0,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0309,799,insufficient_funds,1,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0310,2499,timeout,2,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0311,499,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0312,3499,bank_error,1,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0313,4999,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0314,12999,timeout,0,8,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0315,2499,insufficient_funds,2,10,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0316,12999,timeout,2,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0317,799,bank_error,1,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0318,3499,bank_error,2,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0319,12999,insufficient_funds,2,11,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0320,24999,timeout,2,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0321,5999,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0322,4999,timeout,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0323,4999,insufficient_funds,1,3,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0324,499,bank_error,1,11,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0325,8999,timeout,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0326,24999,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0327,3499,timeout,2,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0328,4999,bank_error,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0329,24999,timeout,1,12,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0330,499,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0331,499,bank_error,1,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0332,4999,insufficient_funds,0,9,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,4999
+TXN0333,8999,insufficient_funds,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0334,5999,insufficient_funds,0,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0335,499,timeout,1,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0336,2499,timeout,2,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0337,12999,timeout,0,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0338,5999,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0339,799,timeout,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0340,24999,expired_card,2,11,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,24999
+TXN0341,8999,bank_error,0,11,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0342,5999,insufficient_funds,0,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0343,499,timeout,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0344,24999,timeout,0,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0345,1299,insufficient_funds,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0346,12999,expired_card,2,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0347,4999,timeout,2,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0348,499,insufficient_funds,2,8,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0349,3499,bank_error,2,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0350,3499,bank_error,2,2,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0351,24999,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0352,5999,timeout,0,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0353,499,insufficient_funds,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0354,8999,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0355,4999,insufficient_funds,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0356,8999,timeout,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0357,8999,timeout,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0358,799,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,799
+TXN0359,1299,bank_error,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0360,12999,timeout,1,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0361,8999,bank_error,2,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0362,24999,timeout,2,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0363,499,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0364,499,bank_error,2,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0365,8999,timeout,0,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0366,4999,timeout,1,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0367,499,insufficient_funds,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0368,799,timeout,1,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0369,799,timeout,0,3,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0370,1299,timeout,0,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0371,499,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,499
+TXN0372,5999,bank_error,1,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0373,1299,insufficient_funds,0,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0374,3499,bank_error,0,0,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0375,2499,bank_error,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0376,5999,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0377,12999,timeout,2,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0378,24999,insufficient_funds,2,8,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,24999
+TXN0379,499,insufficient_funds,3,1,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0380,4999,insufficient_funds,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0381,12999,timeout,1,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0382,499,insufficient_funds,0,3,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0383,799,bank_error,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0384,4999,expired_card,1,6,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0385,24999,timeout,3,7,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0386,3499,bank_error,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0387,12999,bank_error,0,2,RETRY,Bank error with no previous retry.,RECOVERED,12999
+TXN0388,5999,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,5999
+TXN0389,799,insufficient_funds,2,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0390,12999,bank_error,2,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0391,3499,bank_error,2,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0392,799,insufficient_funds,2,11,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,799
+TXN0393,3499,insufficient_funds,1,10,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0394,5999,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,5999
+TXN0395,4999,insufficient_funds,1,5,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,4999
+TXN0396,799,timeout,0,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0397,8999,insufficient_funds,1,9,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,8999
+TXN0398,5999,bank_error,0,8,RETRY,Bank error with no previous retry.,RECOVERED,5999
+TXN0399,799,insufficient_funds,0,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,799
+TXN0400,5999,expired_card,3,11,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,5999
+TXN0401,1299,timeout,0,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0402,799,bank_error,0,8,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0403,1299,insufficient_funds,0,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,1299
+TXN0404,4999,bank_error,3,3,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0405,799,bank_error,0,10,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0406,8999,timeout,0,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0407,1299,timeout,2,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0408,3499,timeout,0,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0409,799,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0410,8999,timeout,2,1,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0411,3499,expired_card,2,10,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0412,3499,insufficient_funds,1,4,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0413,2499,expired_card,1,5,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0414,1299,bank_error,2,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0415,3499,expired_card,0,10,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0416,499,bank_error,1,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0417,3499,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0418,2499,insufficient_funds,0,5,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,2499
+TXN0419,5999,insufficient_funds,0,11,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,5999
+TXN0420,2499,bank_error,1,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0421,3499,timeout,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0422,5999,bank_error,2,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0423,3499,timeout,1,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0424,12999,insufficient_funds,0,0,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,12999
+TXN0425,24999,bank_error,1,6,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0426,799,bank_error,0,8,RETRY,Bank error with no previous retry.,RECOVERED,799
+TXN0427,8999,timeout,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0428,1299,timeout,0,10,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0429,499,bank_error,0,6,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0430,1299,bank_error,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0431,5999,bank_error,2,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0432,799,insufficient_funds,1,12,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,799
+TXN0433,499,timeout,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0434,2499,timeout,2,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0435,499,timeout,0,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0436,799,bank_error,2,11,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0437,799,timeout,1,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0438,12999,bank_error,3,0,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0439,5999,insufficient_funds,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0440,3499,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0441,799,timeout,1,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0442,5999,bank_error,2,9,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0443,12999,insufficient_funds,3,2,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0444,799,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0445,4999,timeout,3,12,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0446,8999,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0447,8999,bank_error,2,5,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0448,1299,bank_error,1,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0449,499,expired_card,1,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,499
+TXN0450,4999,timeout,2,2,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0451,8999,timeout,2,11,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0452,4999,bank_error,1,3,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0453,499,bank_error,1,12,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0454,2499,insufficient_funds,1,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0455,3499,bank_error,0,0,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0456,12999,expired_card,0,6,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0457,2499,insufficient_funds,3,7,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0458,799,bank_error,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0459,2499,bank_error,0,4,RETRY,Bank error with no previous retry.,RECOVERED,2499
+TXN0460,5999,timeout,3,8,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0461,799,bank_error,1,4,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0462,1299,timeout,2,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0463,3499,insufficient_funds,1,6,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,3499
+TXN0464,1299,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0465,1299,insufficient_funds,1,10,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,1299
+TXN0466,12999,insufficient_funds,3,9,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0467,2499,timeout,2,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0468,12999,timeout,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0469,799,timeout,1,7,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0470,12999,bank_error,3,3,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0471,499,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0472,24999,bank_error,0,11,RETRY,Bank error with no previous retry.,RECOVERED,24999
+TXN0473,12999,timeout,2,9,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0474,2499,bank_error,0,11,RETRY,Bank error with no previous retry.,RECOVERED,2499
+TXN0475,499,expired_card,2,0,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0476,24999,bank_error,0,10,RETRY,Bank error with no previous retry.,FAILED,0
+TXN0477,5999,expired_card,1,4,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,5999
+TXN0478,5999,insufficient_funds,3,6,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0479,4999,insufficient_funds,1,2,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,4999
+TXN0480,3499,bank_error,0,10,RETRY,Bank error with no previous retry.,RECOVERED,3499
+TXN0481,24999,timeout,0,6,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0482,2499,insufficient_funds,1,11,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,FAILED,0
+TXN0483,24999,bank_error,1,7,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0484,12999,bank_error,2,8,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0485,2499,insufficient_funds,2,10,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,RECOVERED,2499
+TXN0486,799,bank_error,3,5,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0487,499,insufficient_funds,0,7,RETRY,Customer has a strong payment history and has not exceeded the retry limit.,RECOVERED,499
+TXN0488,5999,expired_card,2,1,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,5999
+TXN0489,3499,expired_card,0,8,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,3499
+TXN0490,5999,timeout,3,10,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0491,499,insufficient_funds,3,11,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0492,4999,timeout,1,4,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0493,4999,timeout,3,4,STOP_AND_ESCALATE,Maximum retry limit reached.,ESCALATED,0
+TXN0494,12999,expired_card,2,11,REQUEST_NEW_PAYMENT_METHOD,Card is expired.,RECOVERED,12999
+TXN0495,8999,timeout,0,0,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0
+TXN0496,12999,bank_error,1,0,REVIEW,No specific recovery policy matched.,MANUAL_REVIEW,0
+TXN0497,5999,bank_error,0,7,RETRY,Bank error with no previous retry.,RECOVERED,5999
+TXN0498,12999,insufficient_funds,2,11,REQUEST_NEW_PAYMENT_METHOD,Insufficient funds with weak payment history or repeated failures.,CUSTOMER_DID_NOT_UPDATE,0
+TXN0499,12999,bank_error,0,10,RETRY,Bank error with no previous retry.,RECOVERED,12999
+TXN0500,499,timeout,0,5,REVIEW,Timeout requires further investigation.,MANUAL_REVIEW,0

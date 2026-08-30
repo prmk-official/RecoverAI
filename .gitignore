@@ -1,0 +1,8 @@
+# Never upload environment variables or API keys.
+.env
+
+# Python cache files are not needed in GitHub.
+__pycache__/
+
+# Local Python virtual environment.
+.venv/
